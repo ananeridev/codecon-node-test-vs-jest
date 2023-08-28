@@ -19,3 +19,21 @@ describe('Fake Timers by Erick Wendel <3 test suite', () => {
         t.mock.timers.reset()
       })
 })
+
+
+const { formatName } = require('./sua-funcao-formatName'); 
+
+describe('formatName', () => {
+  it('deve formatar um nome corretamente', () => {
+    const user = {
+      firstName: 'John',
+      lastName: 'Doe'
+    };
+
+    const result = formatName(user);
+
+    expect(result).toBe('John Doe');
+  });
+});
+
+

@@ -69,6 +69,7 @@ import {
               '[1] id: 2, name: Morty',
             ].join('\n');
           
+            debugger
             const result = await run({ page: 1, pageSize: 10 });
           
             assert.strictEqual(global.fetch.mock.callCount(), 1);
@@ -76,7 +77,7 @@ import {
           
             assert.strictEqual(calls[0].arguments[0], 'https://rickandmortyapi.com/graphql');
           
-            // Assert that the request body matches an object containing the expected properties          
+            debugger
             assert.strictEqual(result, expected);
 
           });
